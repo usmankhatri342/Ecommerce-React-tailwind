@@ -17,6 +17,7 @@ import OfferTimer2 from "./components/OfferTimer2"
 import CategoryList from "./components/CategoryList"
 import OfferTimer3 from "./components/OfferTimer3"
 import Card2 from "./components/AddToCard2"
+import MusicExpo from "./components/MusicExpo"
 
 
 
@@ -51,7 +52,7 @@ function App() {
    <Card2 game={img12} text={"RGB liquid CPU Cooler"} price={"$160"} oldprice={"$170"} discount={"-10%"}/>
   <Card2 game={img13}text={"Small BookSelf"}price={"$360"} oldprice={"$300"} discount={"-25%"}/> 
   </div>
-
+<MusicExpo />
     </>
   )
 }

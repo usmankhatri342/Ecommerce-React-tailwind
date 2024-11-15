@@ -12,6 +12,7 @@ export default function OfferTimer3() {
       
     </div>
     <div className='productName text-5xl font-semibold relative bottom-[70px] left-[117px]'>Best Selling Products</div>
+    <div><button className='bdr w-40 h-14 bg-[#db4444] text-white rounded-[4px] relative bottom-32 ml-[1100px]'>View All</button></div>
     </div>
     </div>
     </>
