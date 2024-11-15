@@ -28,6 +28,7 @@ export default function Hero() {
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Health & Beauty</li>
         </ul>
        </div>
+       <div className="border-r-2 relative bottom-8"></div>
        
         <div className="h-[344px] w-[892px] bg-black flex ">
         <div className="w-[100%] ">

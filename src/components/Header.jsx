@@ -10,6 +10,7 @@ import { FaRegUser } from "react-icons/fa";
 
 export default function Header() {
   return (
+    <>
     
      <nav className='center   justify-evenly p-12  flex'>
         {/* Logo */}
@@ -56,14 +57,15 @@ export default function Header() {
                
                 </div>
                 <div className='bdr flex justify-center items-center text-white text-xs relative right-20 bottom-2 bg-[#db4444] w-4 h-4 rounded-full'>9</div>                    
-
+               
 
                 </div>
-            
+               
             
         
      </nav>
     
-    
+    <div className='border-[.5px] relative bottom-8'></div>
+    </>
   )
 }

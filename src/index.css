@@ -19,8 +19,11 @@
 .bdr {
   border: 2px solid #db4444;
 }
+.bdrbottam{
+  border-bottom: 4px solid black;
+}
 .bdr2 {
-  border: 2px solid green;
+  border: 1px solid #0000004D;
 }
 
 /* .bdr {
