@@ -25,6 +25,9 @@
 .bdr2 {
   border: 1px solid #0000004D;
 }
+.bdr3{
+  border-bottom: 4px solid rgb(145, 136, 136);
+}
 
 /* .bdr {
   border: 2px solid red;
