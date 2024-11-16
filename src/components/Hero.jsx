@@ -3,7 +3,7 @@ import Apple from "../assets/Images/Apple.png"
 
 export default function Hero() {
     return (
-      <div className="flex justify-center gap-[61px]" >
+      <div className="flex justify-center gap-[61px] " >
        {/* <div className="">
         <p className=" cursor-pointer hover:underline hover:text-[#db4444]">Woman's Fashion</p>
         <p className=" cursor-pointer hover:underline hover:text-[#db4444]">Man's Fashion</p>

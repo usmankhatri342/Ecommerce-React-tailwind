@@ -12,9 +12,9 @@ export default function Header() {
   return (
     <>
     
-     <nav className='center   justify-evenly p-12  flex'>
+     <nav className='center   justify-between   p-12  flex'>
         {/* Logo */}
-        <div>
+        <div className='ml-12'>
             <img 
             className=''
             src={logo} 
@@ -22,7 +22,7 @@ export default function Header() {
         </div>
 
         {/* Search bar */}
-                <div className='search gap-8 '>
+                <div className='search  '>
                    <div> <input 
                     className=''
                     type="text"
@@ -36,7 +36,7 @@ export default function Header() {
                     console.log(document.getElementsByClassName("search"));
                   }}
                 >
-                  <CiSearch className="text-2xl mb-0 cursor-pointer font-semibold relative top-2" />
+                  <CiSearch className="text-2xl  cursor-pointer font-semibold relative top-2" />
                 </button>
                 </div>
                         
@@ -49,7 +49,7 @@ export default function Header() {
                     <p className='capitalize hover:underline cursor-pointer hover:text-[#db4444]'>Login</p>
                 </div>
                 {/* Icone */}
-                <div className='flex gap-4'>
+                <div className='flex gap-4 '>
                 <FaRegHeart  className='text-black w-6 h-6'/>
                 <MdOutlineShoppingCart className='w-6 h-6' />
                 <div className='bdr cursor-pointer rounded-full w-8 h-8 bg-[#db4444] flex justify-center items-center '>

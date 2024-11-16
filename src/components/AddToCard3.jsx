@@ -11,7 +11,7 @@ function Card({game , text, width, height,price,oldprice,discount}) {
                 <img className='mb-2 cursor-pointer' src={img36} alt="" />
                 <img className='cursor-pointer' src={img37} alt="" />
             </div>    
-            <div className='flex items-center justify-center h-[180px] w-[190px]  mr-auto ml-auto absolute top-9 left-9'><img height={height} width={width} src={game} alt="ProductImage" /></div>
+            <div className='flex items-center justify-center h-[180px] w-[190px] hover:scale-110 mr-auto ml-auto absolute top-9 left-9'><img height={height} width={width} src={game} alt="ProductImage" /></div>
         </div>
         <h4 className="mb-1">{text}</h4>
         <div className='mb-1'>
