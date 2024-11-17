@@ -41,7 +41,7 @@ export default function Fottar() {
            
         </div>
         
-        <div className='border-t-2 border-gray-800 text-gray-800  relative bottom-14 w-[99%] flex justify-center items-center p-3'><CiAt />
+        <div className='border-t-2 border-gray-800 text-gray-800  relative bottom-14 w-[99%] flex justify-center items-center p-1'><CiAt />
         Copyright Rimel 2022. All right reserved</div>
      
     </nav>

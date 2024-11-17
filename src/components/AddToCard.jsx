@@ -4,7 +4,7 @@ import img7 from '../assets/images/eye.png'
 
 function Card({game , text, width, height,price,oldprice,discount}) {
   return (
-    <div className=" w-[270px] h-[350px] overflow-hidden relative  bottom-52 left-[100px] mt-6 maindiv">
+    <div className=" w-[270px] h-[350px] overflow-hidden relative  bottom-32 left-[100px] mt-6 maindiv">
         <div className='bg-[#F5F5F5] h-[250px] w-[270px]'>
             <div className="border-2 border-red-500 h-[26px] w-14 bg-red-500 rounded flex items-center justify-center text-white text-xs  ml-3 absolute top-3 hover:cursor-pointer">{discount}</div>
             <div className='relative top-6 left-56'>    

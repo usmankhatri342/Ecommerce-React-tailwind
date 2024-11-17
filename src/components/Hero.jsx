@@ -31,7 +31,7 @@ export default function Hero() {
        <div className="border-r-2 relative bottom-8"></div>
        
         <div className="h-[344px] w-[892px] bg-black flex ">
-        <div className="w-[100%] ">
+        <div className="w-[] ">
         <img src={Apple} alt=""  className="text-white cursor-pointer flex relative top-14 left-16"/>
         <p className="text-white relative left-32 top-7 w-72 flex">iPhone 14 Series</p>
 

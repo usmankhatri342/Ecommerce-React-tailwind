@@ -4,7 +4,7 @@ import buler from "../assets/Images/bulerimg.png"
 export default function MusicExpo() {
   return (
     <div>
-      <div className='bdr2 w-[1170px] h-[500px] bg-[#000000] mt-10 ml-24'>
+      <div className='bdr2 w-[1170px] h-[500px] bg-[#000000] mt-8 ml-24'>
       {/* <div>  <img src={buler} alt="" /> </div> */}
         <div className="ml-[525px] mt-24"><img src={MusicImg} alt="" /></div>
         <div  className="relative bottom-[360px] ml-20 ">
@@ -28,7 +28,7 @@ export default function MusicExpo() {
             
         </div>
         <div>
-            <div className="border-2  font-semibold text-sm text-base border-[#FFFFFF] rounded-full flex justify-center items-center w-16 h-16 bg-[#ffffff]"> 
+            <div className="border-2  font-semibold  text-base border-[#FFFFFF] rounded-full flex justify-center items-center w-16 h-16 bg-[#ffffff]"> 
                 <span className="relative left-7 bottom-3">59 </span><br/>
                 <span className="relative  top-2 right-2"> Minutes</span>
                 </div>
