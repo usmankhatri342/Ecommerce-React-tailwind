@@ -1,4 +1,4 @@
-import img5 from '../assets/images/stars.jpg'
+// import img5 from '../assets/images/stars.jpg'
 import img6 from '../assets/images/heart.png'
 import img7 from '../assets/images/eye.png'
 import ReactStars from 'react-stars'
@@ -28,23 +28,25 @@ import ReactStars from 'react-stars'
         <div className='mb-1'>
             <span>{props.price}</span>
             <span className='text-gray-600 ml-3 line-through'>${props.oldprice}</span>
+            <div>  {props.key}</div>
          
         </div>
         
 
-        <img className="h-8 cursor-pointer" src={img5} alt="" />
-        
-    </div>
-     {/* <div>
+        {/* <img className="h-8 cursor-pointer" src={img5} alt="" /> */}
+        <div>
      <ReactStars
       count={5}
-      value={Props.rating}
+      value={props.rating}
       size={24}
-      // color1={"red"}
-      color2={"#db4444"}
-      edit={false}
+      // color2={"red"}
+      color1={"gray"}
+      edit={true}
     />
-  </div>  */}
+  </div>  
+        
+    </div>
+ 
   </>
   )
 }

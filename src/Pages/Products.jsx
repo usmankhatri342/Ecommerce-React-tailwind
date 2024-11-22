@@ -77,11 +77,12 @@ return result || [];
 
       <div className="flex flex-wrap gap-1 mt-28 justify-between relative *: ">
         {searchKaResult?.map((item) => (
-          <AddToCard key={item.id}
-           game={item.thumbnail} 
+          <AddToCard 
+          key={item.id}
+          game={item.thumbnail} 
            text={item.title} 
            price={item.price}
-           discountPercentage={item.discountPercentage} />
+           oldprice={item.discountPercentage} />
            
         ))}
       </div>
