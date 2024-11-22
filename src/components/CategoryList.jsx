@@ -10,7 +10,7 @@ import PhoneImg6 from "../assets/Images/Category-Phone (6).png"
 export default function CategoryList() {
   return (
   <>
-    <div className='flex gap-7 relative bottom-20 justify-center'>
+    <div className='flex  mt-20  justify-between '>
     <div><img src={PhoneImg} alt="Phone-Category" /></div>
     <div><img src={PhoneImg2} alt="Phone-Category" /></div>
     <div><img src={PhoneImg3} alt="Phone-Category" /></div>
@@ -18,7 +18,7 @@ export default function CategoryList() {
     <div><img src={PhoneImg5} alt="Phone-Category" /></div>
     <div><img src={PhoneImg6} alt="Phone-Category" /></div>
     </div>
-    <div className='border-[.5px]  w-[87%] relative  left-28 flex'></div>
+    <div className='border-[.5px]  w-[95%] mt-10 justify-center flex '></div>
     </>
   )
 }

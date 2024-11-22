@@ -24,7 +24,7 @@ export default function Header() {
   const navLinkStyle =
     "capitalize hover:underline cursor-pointer hover:text-primary";
   return (
-    <div className="h-28 relative flex justify-around items-center">
+    <div className="h-28 relative flex justify-between items-center">
       <img src={logo} alt="" className="" />
 
       <div className="w-60 px-2 h-6 rounded center flex bg-[#F5F5F5]">
@@ -83,7 +83,7 @@ export default function Header() {
           <>
 <FaRegHeart />
 <MdOutlineShoppingCart />
-<div className='bdr flex justify-center items-center text-white text-xs relative right-20 bottom-2 bg-[#db4444] w-4 h-4 rounded-full'>9</div>                    
+<div className='bdr flex justify-center items-center text-white text-xs relative right-7 bottom-2 bg-[#db4444] w-4 h-4 rounded-full'>9</div>                    
 
 
           </>

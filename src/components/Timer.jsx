@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Timer() {
   return (
-    <div className='relative bottom-7 '>
+    <div className='mt-16 '>
          <div className='flex text-xs gap-9 font-semibold justify-center relative bottom-32'>
         <p>Day</p>
         <p>Hours</p>

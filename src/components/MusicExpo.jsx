@@ -3,8 +3,8 @@ import buler from "../assets/Images/bulerimg.png"
 
 export default function MusicExpo() {
   return (
-    <div>
-      <div className='bdr2 w-[1170px] h-[500px] bg-[#000000] mt-8 ml-24'>
+    <div className="m">
+      <div className='bdr2 w-[1200px] h-[500px] bg-[#000000]'>
       {/* <div>  <img src={buler} alt="" /> </div> */}
         <div className="ml-[525px] mt-24"><img src={MusicImg} alt="" /></div>
         <div  className="relative bottom-[360px] ml-20 ">
