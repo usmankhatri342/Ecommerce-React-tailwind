@@ -26,8 +26,8 @@ import ReactStars from 'react-stars'
         </div>
         <h4 className="mb-1">{props.text}</h4>
         <div className='mb-1'>
-            <span>{props.price}</span>
-            <span className='text-gray-600 ml-3 line-through'>${props.oldprice}</span>
+            <span>{props.discountPrice}</span>
+            <span className='text-gray-600 ml-3 line-through'>${props.price}</span>
             <div>  {props.key}</div>
          
         </div>

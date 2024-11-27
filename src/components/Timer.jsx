@@ -15,7 +15,7 @@ export default function Timer() {
         <p>19</p>
         <p>56</p>
     </div>
-    <div className=' text-[#db4444] text-5xl ml-[590px] relative bottom-[165px] gap-[60px] flex'>
+    <div className=' text-[#db4444] text-5xl ml-[515px] relative bottom-[165px] gap-[60px] flex'>
       <div>:</div>
       <div>:</div>
       <div>:</div>

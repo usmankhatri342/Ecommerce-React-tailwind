@@ -1,5 +1,7 @@
 import MobileImg from "../assets/Images/hero2.png"
 import Apple from "../assets/Images/Apple.png"
+import { FaArrowRight } from "react-icons/fa6";
+
 
 export default function Hero() {
     return (
@@ -34,6 +36,12 @@ export default function Hero() {
         <div className="w-[] ">
         <img src={Apple} alt=""  className="text-white cursor-pointer flex relative top-14 left-16"/>
         <p className="text-white relative left-32 top-7 w-72 flex">iPhone 14 Series</p>
+      
+       <div className="cursor-pointer"> 
+        <p className=" text-white ml-16 mt-44 text-base font-semibold  ">Shop Now</p>
+       <FaArrowRight className="text-white ml-40 relative bottom-4 " />
+
+       </div>
 
         </div>
         <div className="text-white text-5xl tracking-tight	 relative top-[127px] right-56 ">

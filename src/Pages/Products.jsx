@@ -3,14 +3,16 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import AddToCard from "../components/AddToCard";
+import Card from "../components/AddToCard";
+//import useProducts from "../Hooks/useProduct";
 
 export default function Products() {
+  //const { products, isLoading, error } = useProducts("limit=15&skip=35");
   const API_KEY = "https://dummyjson.com/products";
 
  
 
-  const [products, setProducts] = useState(null);
+   const [products, setProducts] = useState(null);
 
 
   
@@ -68,21 +70,21 @@ return result || [];
           setSearchTerm( event.target.value?.toLocaleLowerCase())
            
         }}
-        className="block  outline-none rounded-md border-0 py-1.5 pl-7 w-96 ml-28 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary my-8 sm:text-sm/6"
+        className="block  outline-none rounded-md border-0 py-1.5 pl-7 w-96 ml-28 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 my-8 sm:text-sm/6"
         placeholder="Search your product"
       />
     </form>
 
-      {products === null ? "Loading...." : null}
+      {products === null ? "Loading ho raha hai w8 ...." : null}
 
       <div className="flex flex-wrap gap-1 mt-28 justify-between relative *: ">
         {searchKaResult?.map((item) => (
-          <AddToCard 
+          <Card 
           key={item.id}
           game={item.thumbnail} 
            text={item.title} 
-           price={item.price}
-           oldprice={item.discountPercentage} />
+           discountprice={item.price}
+           price={item.discountPercentage} />
            
         ))}
       </div>

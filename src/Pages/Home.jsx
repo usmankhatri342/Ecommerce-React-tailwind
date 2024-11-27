@@ -5,10 +5,10 @@ import img3 from '../assets/images/tvimg.png'
 import img4 from '../assets/images/chairimg.png'
 import Hero from "../components/Hero"
 
-import img10 from "../assets/Images/Card2shart.png"
-import img11 from "../assets/Images/Card2bag.png"
-import img12 from "../assets/Images/Card2spekar.png"
-import img13 from "../assets/Images/Card2maze.png"
+//import img10 from "../assets/Images/Card2shart.png"
+//import img11 from "../assets/Images/Card2bag.png"
+//import img12 from "../assets/Images/Card2spekar.png"
+//import img13 from "../assets/Images/Card2maze.png"
 import OfferTimer from "../components/OfferTimer"
 import Timer from "../components/Timer"
 import Button from "../components/Button"
@@ -26,34 +26,43 @@ import img113 from "../assets/images2/Card3shos.png"
 import Newarrvil from "../components/Newarrvil"
 import { Link } from 'react-router-dom'
 
+//import Slider from '../components/Silder'
+//import useProducts from '../Hooks/useProduct'
+
 
 // import Banner from '../components/Banner'
 // import Header from '../components/Header'
 // game , text, width, height,price,oldprice,discount}
 export default function Home() {
-  const isLoggedIn = true;
+  // const { products, isLoading, error } = useProducts("limit=15&skip=35");
+ // const isLoggedIn = true;
   return (
     <>
+    
     <div className=''>
       
       {/* <Banner />
       <Header /> */}
+      
  
    <Hero />
-     
+   {/* <Silder />  */}
+   
  <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales"/>
 
  
  <Timer/>
 
 
-      <div className='flex justify-between relative right-24 '>
-  <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} price={"$120"} oldprice={"$160"} discount={"-40%"}/>
-  <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} price={"$960"} oldprice={"$1160"} className="special-card" discount={"-35%"} />
-  <Card game={img3} text={"IPS LCD Gaming Monitor"} price={"$370"} oldprice={"$400"} discount={"-30%"}/>
-  <Card game={img4}text={"S-Series Comfort Chair"}price={"$375"} oldprice={"$400"} discount={"-25%"}/><br />
+ {/* // <Slider/>  */}
 
-  </div>
+       <div className='flex justify-between relative right-24 '>
+  <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} discountPrice={"$120"} price={"$160"} discount={"-40%"}/>
+  <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} discountPrice={"$960"} price={"$1160"} className="special-card" discount={"-35%"} />
+  <Card game={img3} text={"IPS LCD Gaming Monitor"} discountprice={"370"} price={"400"} discount={"-30%"}/>
+  <Card game={img4}text={"S-Series Comfort Chair"}discountprice={"375"} price={"400"} discount={"-25%"}/><br />  
+
+  </div>    
 
 <div>
 
@@ -69,10 +78,16 @@ export default function Home() {
 
 
    <div className=" flex justify-between relative right-24 mt-32">
-    <Card game={img10} height={"152"} width={"172"}text={"The north coat"} price={"$260"} oldprice={"$360"} discount={"-40%"}/> 
-  <Card game={img11} height={"101"} width={"191"} text={"Gucci duffle bag"} price={"$960"} oldprice={"$1160"} className="special-card" discount={"-35%"} />
-   <Card game={img12} text={"RGB liquid CPU Cooler"} price={"$160"} oldprice={"$170"} discount={"-10%"}/>
-  <Card game={img13}text={"Small BookSelf"}price={"$360"} oldprice={"$300"} discount={"-25%"}/> 
+
+
+    <Card  />
+    <Card />
+    <Card />
+    <Card />
+    {/* <Card game={img10} height={"152"} width={"172"}text={"The north coat"} discountPrice={"$260"} price={"$360"} discount={"-40%"}/> 
+  <Card game={img11} height={"101"} width={"191"} text={"Gucci duffle bag"} discountPrice={"$960"} price={"$1160"} className="special-card" discount={"-35%"} />
+   <Card game={img12} text={"RGB liquid CPU Cooler"} discountPrice={"$160"} Price={"$170"} discount={"-10%"}/>
+  <Card game={img13}text={"Small BookSelf"}discountPrice={"$360"}price={"$300"} discount={"-25%"}/>  */}
   </div>
  
 <MusicExpo />
@@ -80,12 +95,12 @@ export default function Home() {
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
 
 <div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
-    <Card game={img111} height={"180"} width={"115"}text={"Breed Dry Dog Food"} price={"$260"} discount={"-25%"} /> 
-  <Card game={img110} height={"163"} width={"146"} text={"CANON EOS DSLR Camera"} price={"$960"} discount={"-20%"} />
-   <Card game={img112} text={"ASUS FHD Gaming Laptop"} price={"$160"} discount={"-35%"} />
-  <Card game={img113}text={"Jr. Zoom Soccer Cleats"}price={"$360"}  discount={"-30%"} /> 
-  <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} price={"$120"} discountPrice={"$160"} discount={"-40%"}/>
-  <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} price={"$960"} discountPrice={"$1160"} className="special-card" discount={"-35%"} />
+    <Card game={img111} height={"180"} width={"115"}text={"Breed Dry Dog Food"}  discountprice={"$260"} discount={"-25%"} /> 
+  <Card game={img110} height={"163"} width={"146"} text={"CANON EOS DSLR Camera"} discountprice={"$960"} discount={"-20%"} />
+   <Card game={img112} text={"ASUS FHD Gaming Laptop"} discountprice={"$160"} discount={"-35%"} />
+  <Card game={img113}text={"Jr. Zoom Soccer Cleats"} discountprice={"$360"}  discount={"-30%"} /> 
+  <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} discountprice={"$120"} Price={"$160"} discount={"-40%"}/>
+  <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} discountprice={"$960"} Price={"$1160"} className="special-card" discount={"-35%"} />
   <Card game={img3} text={"IPS LCD Gaming Monitor"} price={"$370"} discountPrice={"$400"} discount={"-30%"}/>
   <Card game={img4}text={"S-Series Comfort Chair"}price={"$375"} discountPrice={"$400"} discount={"-25%"}/>
   </div>

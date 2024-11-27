@@ -9,6 +9,11 @@ export default {
       colors:{
         "primary":"#DB4444"
        },
+       screens:{
+        "mobile":"310px",
+        
+  
+       }
     },
   },
   plugins: [],
