@@ -15,7 +15,7 @@ import Card from "./AddToCard";
 import useProducts from "../hooks/useProducts";
 
 export default function Slider() {
-  const { products, isLoading, error } = useProducts("limit=5&skip=30");
+  const { products, isLoading, error } = useProducts("limit=10&skip=50");
 
   return (
     <div>
@@ -23,8 +23,9 @@ export default function Slider() {
       {error}
 
       <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
+       
+        spaceBetween={20}
+        slidesPerView={4}
         modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
         autoplay={{ delay: 2000, pauseOnMouseEnter: true }}
         pagination={{ clickable: true }}
@@ -33,15 +34,16 @@ export default function Slider() {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        {products?.slice(0, 6)?.map((item) => (
+        {products?.slice(0, 25)?.map((item) => (
           <SwiperSlide key={item.id}>
             <Card
               id={item.id}
-              image={item.thumbnail}
-              name={item.title}
+              game={item.thumbnail}
+              text={item.title}
               price={item.price}
-              discountPercentage={item.discountPercentage}
+              discountPrice={item.discountPercentage}
               rating={item.rating}
+              
             />
           </SwiperSlide>
         ))}

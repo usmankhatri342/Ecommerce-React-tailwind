@@ -27,6 +27,7 @@ import Newarrvil from "../components/Newarrvil"
 import { Link } from 'react-router-dom'
 
 //import Slider from '../components/Silder'
+import Silder from '../components/Silder'
 //import useProducts from '../Hooks/useProduct'
 
 
@@ -51,50 +52,58 @@ export default function Home() {
  <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales"/>
 
  
- <Timer/>
+ <Timer />
 
 
- {/* // <Slider/>  */}
+  <div className='relative bottom-'>
+  <Silder/>  
+  </div>
 
-       <div className='flex justify-between relative right-24 '>
+       {/* <div className='flex justify-between relative right-24 '>
   <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} discountPrice={"$120"} price={"$160"} discount={"-40%"}/>
   <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} discountPrice={"$960"} price={"$1160"} className="special-card" discount={"-35%"} />
   <Card game={img3} text={"IPS LCD Gaming Monitor"} discountprice={"370"} price={"400"} discount={"-30%"}/>
   <Card game={img4}text={"S-Series Comfort Chair"}discountprice={"375"} price={"400"} discount={"-25%"}/><br />  
 
-  </div>    
+  </div>     */}
 
 <div>
 
 <Link to={"/products"} className="h-14 w-56 mx-auto  justify-center text-center flex font-medium rounded bg-primary center text-white"><p className='items-center  flex justify-center'> View All Products </p> </Link>
 
 <OfferTimer OfferDay = "Categories" OfferName ="Best Selling Products"/>
-
+<div className='relative top-16'>
+<Silder /> 
+</div>
+<div className='relative bottom-'>
 <CategoryList />
-
+</div>
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
+<div className='relative top-16'>
+<Silder /> 
+</div>
 
 {/* <AddToCard2 /> */}
 
-
+{/* 
    <div className=" flex justify-between relative right-24 mt-32">
 
 
-    <Card  />
+    {/* <Card  />
     <Card />
     <Card />
-    <Card />
+    <Card /> */}
     {/* <Card game={img10} height={"152"} width={"172"}text={"The north coat"} discountPrice={"$260"} price={"$360"} discount={"-40%"}/> 
   <Card game={img11} height={"101"} width={"191"} text={"Gucci duffle bag"} discountPrice={"$960"} price={"$1160"} className="special-card" discount={"-35%"} />
    <Card game={img12} text={"RGB liquid CPU Cooler"} discountPrice={"$160"} Price={"$170"} discount={"-10%"}/>
   <Card game={img13}text={"Small BookSelf"}discountPrice={"$360"}price={"$300"} discount={"-25%"}/>  */}
-  </div>
+  {/* </div>  */}
  
 <MusicExpo />
 
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
 
-<div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
+{/* <div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
     <Card game={img111} height={"180"} width={"115"}text={"Breed Dry Dog Food"}  discountprice={"$260"} discount={"-25%"} /> 
   <Card game={img110} height={"163"} width={"146"} text={"CANON EOS DSLR Camera"} discountprice={"$960"} discount={"-20%"} />
    <Card game={img112} text={"ASUS FHD Gaming Laptop"} discountprice={"$160"} discount={"-35%"} />
@@ -103,7 +112,11 @@ export default function Home() {
   <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} discountprice={"$960"} Price={"$1160"} className="special-card" discount={"-35%"} />
   <Card game={img3} text={"IPS LCD Gaming Monitor"} price={"$370"} discountPrice={"$400"} discount={"-30%"}/>
   <Card game={img4}text={"S-Series Comfort Chair"}price={"$375"} discountPrice={"$400"} discount={"-25%"}/>
-  </div>
+  </div> */}
+
+<div className='relative top-16'>
+<Silder /> 
+</div>
   <Button className="h-14 w-56 mx-auto my-16 justify-center flex"> View All Products </Button>
 
 

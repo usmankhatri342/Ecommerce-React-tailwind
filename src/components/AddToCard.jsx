@@ -15,14 +15,14 @@ import ReactStars from 'react-stars'
        
   return (
     <>
-    <div className=" w-[270px] h-[350px] overflow-hidden relative p-3 sh bottom-32 left-[100px] mt-6 maindiv">
+    <div className=" w-[270px] h-[350px] overflow-hidden relative p-3 sh bottom-32 left-[100px] mt-32 maindiv">
         <div className='bg-[#F5F5F5] h-[250px] w-[270px]'>
             <div className="border-2 border-primary h-[26px] w-14 bg-primary rounded flex items-center justify-center text-white text-xs  ml-3 absolute top-6  ">{-30}</div>
             <div className='relative top-6 left-56'>    
                 <img className='mb-2 cursor-pointer relative right-4' src={img6} alt="" />
                 <img className='cursor-pointer relative right-4' src={img7} alt="" />
             </div>    
-            <div className='flex items-center justify-center h-[180px] w-[190px]  mr-auto ml-auto absolute top-9 left-9 hover:scale-110'><img height={props.height} width={props.width} src={props.game} alt="ProductImage" /></div>
+            <div className='flex items-center justify-center  mr-auto ml-auto absolute top-9 left-9 hover:scale-110'><img  src={props.game} alt="ProductImage" /></div>
         </div>
         <h4 className="mb-1">{props.text}</h4>
         <div className='mb-1'>
