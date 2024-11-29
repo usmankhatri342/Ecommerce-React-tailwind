@@ -23,7 +23,10 @@
   border-bottom: 4px solid black;
 }
 .bdr2 {
-  border: 1px solid #0000004D;
+  border: 2px solid #0e0d0d4d;
+}
+.bdr4{
+  border: 1px solid #0a0a0a;
 }
 .bdr3{
   border-bottom: 4px solid rgb(145, 136, 136);

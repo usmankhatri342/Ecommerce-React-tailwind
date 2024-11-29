@@ -1,8 +1,8 @@
 import Card from '../components/AddToCard'
-import img1 from '../assets/Images/gameimg.png'
-import img2 from '../assets/images/keyboardimg.png'
-import img3 from '../assets/images/tvimg.png'
-import img4 from '../assets/images/chairimg.png'
+//import img1 from '../assets/Images/gameimg.png'
+//import img2 from '../assets/images/keyboardimg.png'
+//import img3 from '../assets/images/tvimg.png'
+//import img4 from '../assets/images/chairimg.png'
 import Hero from "../components/Hero"
 
 //import img10 from "../assets/Images/Card2shart.png"
@@ -18,16 +18,18 @@ import CategoryList from "../components/CategoryList"
 
 import MusicExpo from "../components/MusicExpo"
 
-import img110 from "../assets/images2/Card3camra.png"
-import img111 from "../assets/images2/Card3choko.png"
-import img112 from "../assets/images2/Card3laptop.png"
-import img113 from "../assets/images2/Card3shos.png"
+//import img110 from "../assets/images2/Card3camra.png"
+//import img111 from "../assets/images2/Card3choko.png"
+//import img112 from "../assets/images2/Card3laptop.png"
+//import img113 from "../assets/images2/Card3shos.png"
 
 import Newarrvil from "../components/Newarrvil"
 import { Link } from 'react-router-dom'
 
 //import Slider from '../components/Silder'
 import Silder from '../components/Silder'
+import Products from './Products'
+//import Products from './Products'
 //import useProducts from '../Hooks/useProduct'
 
 
@@ -44,21 +46,18 @@ export default function Home() {
       
       {/* <Banner />
       <Header /> */}
-      
- 
-   <Hero />
-   {/* <Silder />  */}
+       <Hero />
+    <Silder /> 
    
  <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales"/>
 
  
  <Timer />
-
-
-  <div className='relative bottom-'>
-  <Silder/>  
+<div className='relative bottom-'>
+   <Silder/>   
   </div>
-
+ 
+  
        {/* <div className='flex justify-between relative right-24 '>
   <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} discountPrice={"$120"} price={"$160"} discount={"-40%"}/>
   <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} discountPrice={"$960"} price={"$1160"} className="special-card" discount={"-35%"} />
@@ -68,6 +67,22 @@ export default function Home() {
   </div>     */}
 
 <div>
+   {/* <div>
+  {products?.slice(0, 25)?.map((item) => (
+          
+            <Card
+            key={item.id}
+              id={item.id}
+              game={item.thumbnail}
+              text={item.title}
+              price={item.price}
+              discountPrice={item.discountPercentage}
+              rating={item.rating}
+              
+            />
+         
+        ))}
+  </div>   */}
 
 <Link to={"/products"} className="h-14 w-56 mx-auto  justify-center text-center flex font-medium rounded bg-primary center text-white"><p className='items-center  flex justify-center'> View All Products </p> </Link>
 
@@ -80,9 +95,20 @@ export default function Home() {
 </div>
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
 <div className='relative top-16'>
-<Silder /> 
-</div>
+   {/* <div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
+    <Card game={img111} height={"180"} width={"115"}text={"Breed Dry Dog Food"}  discountprice={"$260"} discount={"-25%"} /> 
+  <Card game={img110} height={"163"} width={"146"} text={"CANON EOS DSLR Camera"} discountprice={"$960"} discount={"-20%"} />
+   <Card game={img112} text={"ASUS FHD Gaming Laptop"} discountprice={"$160"} discount={"-35%"} />
+  <Card game={img113}text={"Jr. Zoom Soccer Cleats"} discountprice={"$360"}  discount={"-30%"} /> 
+  <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} discountprice={"$120"} Price={"$160"} discount={"-40%"}/>
+  <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} discountprice={"$960"} Price={"$1160"} className="special-card" discount={"-35%"} />
+  <Card game={img3} text={"IPS LCD Gaming Monitor"} price={"$370"} discountPrice={"$400"} discount={"-30%"}/>
+  <Card game={img4}text={"S-Series Comfort Chair"}price={"$375"} discountPrice={"$400"} discount={"-25%"}/>
+  </div>  */}
+  
 
+</div>
+<Silder /> 
 {/* <AddToCard2 /> */}
 
 {/* 

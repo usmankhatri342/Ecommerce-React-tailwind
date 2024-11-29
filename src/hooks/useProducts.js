@@ -31,7 +31,7 @@ export default function useProducts(query) {
     getProductData();
   }, []);
 
-  console.log("slider products ", products);
+  //console.log("slider products ", products);
 
   return {
     products: products,

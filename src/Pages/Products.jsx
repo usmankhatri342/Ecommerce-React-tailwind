@@ -1,40 +1,23 @@
 
 
 
-import axios from "axios";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import Card from "../components/AddToCard";
-//import useProducts from "../Hooks/useProduct";
+import useProducts from "../hooks/useProducts";
+
 
 export default function Products() {
-  //const { products, isLoading, error } = useProducts("limit=15&skip=35");
-  const API_KEY = "https://dummyjson.com/products";
-
+  const { products, isLoading, error } = useProducts();
+  
+  
+//
  
 
-   const [products, setProducts] = useState(null);
-
-
   
-
-  const getProductData = async () => {
-    const response = await axios(API_KEY);
-
-    setProducts(response?.data?.products);
-  };
-
-  // useEffect ak bar call hoga (in this case)
-  useEffect(() => {
-    getProductData();
-  }, []);
-
-
-
-  // console.log("products ", products);
 
   const [searchTerm,setSearchTerm ]= useState(" ")
   
-  console.log(searchTerm);
+  //console.log(searchTerm);
 
   const searchProducts = ()=> {
     const result = products?.filter ((item) => {
@@ -77,14 +60,17 @@ return result || [];
 
       {products === null ? "Loading ho raha hai w8 ...." : null}
 
-      <div className="flex flex-wrap gap-1 mt-28 justify-between relative *: ">
+      <div className="flex flex-wrap gap-1 mt-28 justify-between relative  ">
         {searchKaResult?.map((item) => (
           <Card 
+          id={item.id}
           key={item.id}
-          game={item.thumbnail} 
-           text={item.title} 
-           discountprice={item.price}
-           price={item.discountPercentage} />
+          game={item.thumbnail}
+          name={item.title}
+          price={item.price}
+          discountPercentage={item.discountPercentage}
+          rating={item.rating}
+           />
            
         ))}
       </div>

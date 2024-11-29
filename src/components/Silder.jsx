@@ -15,7 +15,7 @@ import Card from "./AddToCard";
 import useProducts from "../hooks/useProducts";
 
 export default function Slider() {
-  const { products, isLoading, error } = useProducts("limit=10&skip=50");
+  const { products, isLoading, error } = useProducts("limit=15&skip=30");
 
   return (
     <div>
