@@ -1,8 +1,8 @@
 import Card from '../components/AddToCard'
-//import img1 from '../assets/Images/gameimg.png'
-//import img2 from '../assets/images/keyboardimg.png'
-//import img3 from '../assets/images/tvimg.png'
-//import img4 from '../assets/images/chairimg.png'
+import img1 from '../assets/Images/gameimg.png'
+import img2 from '../assets/images/keyboardimg.png'
+import img3 from '../assets/images/tvimg.png'
+import img4 from '../assets/images/chairimg.png'
 import Hero from "../components/Hero"
 
 //import img10 from "../assets/Images/Card2shart.png"
@@ -47,24 +47,28 @@ export default function Home() {
       {/* <Banner />
       <Header /> */}
        <Hero />
-    <Silder /> 
-   
- <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales"/>
-
- 
- <Timer />
-<div className='relative bottom-'>
-   <Silder/>   
-  </div>
- 
-  
-       {/* <div className='flex justify-between relative right-24 '>
+       <div className="mt-20">
+    <div className='mobiles:hidden laptop:block tablet:block laptopl:block '> <Silder   />  </div>
+             <div className='flex justify-between relative right-24 mobiles:flex-col mobiles:justify-center tre tablet:hidden laptop:hidden mobiles:ml-6 '>
   <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} discountPrice={"$120"} price={"$160"} discount={"-40%"}/>
   <Card game={img2} height={"101"} width={"191"} text={"AK-900 Wired Keyboard"} discountPrice={"$960"} price={"$1160"} className="special-card" discount={"-35%"} />
   <Card game={img3} text={"IPS LCD Gaming Monitor"} discountprice={"370"} price={"400"} discount={"-30%"}/>
   <Card game={img4}text={"S-Series Comfort Chair"}discountprice={"375"} price={"400"} discount={"-25%"}/><br />  
 
-  </div>     */}
+  </div>    
+    </div>
+    <div className="mobiles:hidden">
+ <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales" />
+</div>
+ <div className='mobiles:hidden'>
+ <Timer />
+ </div>
+  <div className='relative bottom-20 '>
+   {/* <Silder/>    */}
+  </div> 
+ 
+  
+
 
 <div>
    {/* <div>
@@ -85,15 +89,18 @@ export default function Home() {
   </div>   */}
 
 <Link to={"/products"} className="h-14 w-56 mx-auto  justify-center text-center flex font-medium rounded bg-primary center text-white"><p className='items-center  flex justify-center'> View All Products </p> </Link>
-
+<div className='mobiles:hidden laptop:block laptopl:block tablet:block'>
 <OfferTimer OfferDay = "Categories" OfferName ="Best Selling Products"/>
-<div className='relative top-16'>
+</div>
+<div className='relative top-16 mobiles:hidden laptop:block laptopl:block tablet:block'>
 <Silder /> 
 </div>
-<div className='relative bottom-'>
+<div className='mobiles:flex-col overflow-hidden '>
 <CategoryList />
 </div>
+<div className='mobiles:hidden laptop:block laptopl:block tablet:block'>
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
+</div>
 <div className='relative top-16'>
    {/* <div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
     <Card game={img111} height={"180"} width={"115"}text={"Breed Dry Dog Food"}  discountprice={"$260"} discount={"-25%"} /> 
@@ -108,7 +115,9 @@ export default function Home() {
   
 
 </div>
+<div className='mt-20 mobiles:hidden laptop:block laptopl:block tablet:block'>
 <Silder /> 
+</div>
 {/* <AddToCard2 /> */}
 
 {/* 
@@ -124,11 +133,12 @@ export default function Home() {
    <Card game={img12} text={"RGB liquid CPU Cooler"} discountPrice={"$160"} Price={"$170"} discount={"-10%"}/>
   <Card game={img13}text={"Small BookSelf"}discountPrice={"$360"}price={"$300"} discount={"-25%"}/>  */}
   {/* </div>  */}
- 
+  <div className=' mobiles:hidden laptop:block laptopl:block tablet:block'>
 <MusicExpo />
-
+</div>
+<div className='mt-20 mobiles:hidden laptop:block laptopl:block tablet:block'>
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
-
+</div>
 {/* <div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
     <Card game={img111} height={"180"} width={"115"}text={"Breed Dry Dog Food"}  discountprice={"$260"} discount={"-25%"} /> 
   <Card game={img110} height={"163"} width={"146"} text={"CANON EOS DSLR Camera"} discountprice={"$960"} discount={"-20%"} />
@@ -140,17 +150,17 @@ export default function Home() {
   <Card game={img4}text={"S-Series Comfort Chair"}price={"$375"} discountPrice={"$400"} discount={"-25%"}/>
   </div> */}
 
-<div className='relative top-16'>
+<div className='relative top-16 mobiles:hidden laptop:block laptopl:block tablet:block'>
 <Silder /> 
 </div>
-  <Button className="h-14 w-56 mx-auto my-16 justify-center flex"> View All Products </Button>
+  <Button className="h-14 w-56 mx-auto my-16 justify-center mobiles:hidden flex"> View All Products </Button>
 
-
+<div className='mobiles:hidden laptop:block laptopl:block tablet:block'>
   <OfferTimer OfferDay = "Featured" OfferName ="New Arrival"/>
 
   <Newarrvil /> 
  
-
+  </div>
   
   
  

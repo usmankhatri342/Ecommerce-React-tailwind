@@ -9,6 +9,7 @@ import Login from "./Pages/Login";
 import Contact from "./Pages/Contact";
 import Products from "./Pages/Products";
 import ProductsDetils from "./Pages/ProductsDetils";
+import Fottar2 from "./components/Fottar2";
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
       </Routes>
       
       </div>
-      <div className=''><Fottar  /></div>
+      <div className='laptop:block tablet:block mobiles:hidden mobilem:hidden mobilel:hidden'><Fottar  /></div>
+      <div className="laptop:hidden tablet:hidden mobiles:block mobilem:block mobilel:block"><Fottar2 /></div>
     </>
   )
 }

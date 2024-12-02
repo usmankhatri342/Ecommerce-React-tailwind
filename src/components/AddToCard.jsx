@@ -22,10 +22,10 @@ import {Link} from 'react-router-dom'
 
 <div
        
-       className=" w-[270px] h-[390px] bg-slate-200 shadow-xl overflow-hidden relative p-3 sh bottom-32 left-[100px] mt-32 maindiv">
+       className=" w-[270px] h-[390px] bg-slate-200 shadow-xl  overflow-hidden relative p-3 sh bottom-32 left-[100px] mt-32 maindiv">
     
-        <div className='bg-slate-100 h-[250px] w-full'> 
-            <div className="border-2 border-primary h-[26px] w-14 bg-primary rounded flex items-center justify-center text-white text-xs  ml-3 absolute top-6  ">-{30}</div>
+        <div className='bg-slate-100 h-[250px] w-full '> 
+            <div className="border-2 border-primary h-[26px] w-14 bg-primary rounded flex items-center justify-center text-white text-xs  ml-3 absolute top-6  ">{-25}</div>
             <div className='relative top-6 left-56'>    
                 <img className='mb-2 cursor-pointer relative right-4' src={img6} alt="" />
                 <img className='cursor-pointer relative right-4' src={img7} alt="" />

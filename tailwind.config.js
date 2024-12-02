@@ -10,7 +10,12 @@ export default {
         "primary":"#DB4444"
        },
        screens:{
-        "mobile":"310px",
+        "mobiles":"320px",
+        "mobilem":"375px",
+        "mobilel":"425px",
+        "tablet":"768px",
+        "laptop":"1024px",
+        "laptop":"1440px",
         
   
        }

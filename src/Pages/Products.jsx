@@ -40,7 +40,7 @@ return result || [];
   
 
   return (
-    <div className="container-one">
+    <div className="container-one mobiles:relative left-12 ">
     <div className="relative right-28">
 <form >
 <input

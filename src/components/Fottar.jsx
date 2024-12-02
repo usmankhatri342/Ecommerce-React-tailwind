@@ -46,10 +46,7 @@ export default function Fottar() {
             </div>
            
         </div>
-        <div className="">
-        <div className='border-t-2 border-gray-800 text-gray-800  relative bottom-14  flex justify-center items-center p-1'><CiAt  />
-        <p className="ml-3">Copyright Rimel 2022. All right reserved</p></div>
-     </div>
+      
     </nav>
       
     </>

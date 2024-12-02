@@ -27,6 +27,8 @@ export default function ProductsDetils() {
   if (isLoading) return "loading...";
   
   return (
+<>
+ 
     <main className="flex min-h-[600px] shadow-2xl">
      <div className="imges w-[60%] bg-slate-100 flex">
      <div className="h-full w-[150px] gap-5  ">
@@ -57,6 +59,12 @@ export default function ProductsDetils() {
      </div>
      
     </main>
+    {/* <div className="flex justify-center p-10">
+    <Link 
+    to={"/"}
+     className="bdr bg-primary w-40 flex justify-center items-center" > Back To ...</Link>
+    </div> */}
+    </>
   )
 }
 {/* <img src={product.images[0]} alt="" /> */}

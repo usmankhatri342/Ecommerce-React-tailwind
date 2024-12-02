@@ -15,10 +15,10 @@ import Card from "./AddToCard";
 import useProducts from "../hooks/useProducts";
 
 export default function Slider() {
-  const { products, isLoading, error } = useProducts("limit=15&skip=30");
+  const { products, isLoading, error } = useProducts( );
 
   return (
-    <div>
+    <div className="mobiles:flex-col">
       {isLoading ? "loading..." : ""}
       {error}
 
