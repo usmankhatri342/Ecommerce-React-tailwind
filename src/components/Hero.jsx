@@ -8,8 +8,8 @@ export default function Hero() {
       <>
       <div className="flex  justify-between gap-[61px] " >
       
-       <div className="relative bottom-4 ">
-        <ul className="mobiles:justify-center mobiles:flex-col mobiles:relative left-20 mobiles:bg-slate-100 laptop:block laptopl:block tablet:block">
+       <div className="relative bottom-4  ">
+        <ul className=" mobiles:justify-center mobiles:flex-col  laptop:block laptopl:block tablet:block">
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Woman's Fashion</li>
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Man's Fashion</li>
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Electronics</li>

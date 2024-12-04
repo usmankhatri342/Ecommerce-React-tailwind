@@ -29,7 +29,7 @@ export default function ProductsDetils() {
   return (
 <>
  
-    <main className="flex min-h-[600px] shadow-2xl">
+    <main className="flex min-h-[600px] shadow-2xl ">
      <div className="imges w-[60%] bg-slate-100 flex">
      <div className="h-full w-[150px] gap-5  ">
          {product?.images.map((image)=>(

@@ -4,7 +4,7 @@ import logo2 from "../assets/logo/haflogo.jpg"
 import amna from "../assets/images2/amna.jpg"
 // import logoMobile from "../assets/logo/logo-mobile.svg";
 import { CiSearch } from "react-icons/ci";
-import { FaRegHeart } from "react-icons/fa";
+import { FaLess, FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
@@ -21,19 +21,19 @@ const links = [
 
 export default function Header() {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   const navLinkStyle =
     "capitalize hover:underline cursor-pointer hover:text-primary";
   return (
     <div className="h-28 relative flex  justify-between mobiles:justify-between mobiles:gap- mobiles:ml-4 items-center">
-      <img src={logo1} alt="" className="w-32 h-16  xl:flex 2xl:flex lg:flex mobiles:hidden mobilem:hidden mobilel:hidden laptop:ml-14  "  />
+      <img src={logo1} alt="" className="w-32 h-16  xl:flex 2xl:flex lg:flex mobiles:hidden mobilem:hidden mobilel:hidden   "  />
       <img src={logo2} alt="" className="w-16 h-12  xl:hidden 2xl:hidden lg:hidden md:flex sm:flex mobiles:block mobilem:flex mobilel:flex "/>
 
       <div className="w-60 px-2 h-6 rounded center flex ">
         <input
           type="search"
-          className="outline-none w-full text-sm bg-transparent mobiles:w-28 mobiles:ml-4  "
+          className="outline-none w-full  text-sm bg-transparent  mobiles:ml-4  "
           placeholder="What are you looking for?"
         />
         <CiSearch className="text-3xl mobiles:hidden mobilem:hidden mobilel:hidden laptop:flex laptopl:flex tablet:flex" />
@@ -92,7 +92,7 @@ export default function Header() {
           </>
         ) : null}
 
-        <div className="bg-primary rounded-full relative right-5  overflow-hidden mobiles:ml-6 h-8 w-8 center text-base text-white">
+        <div className="bg-primary rounded-full relative right-5 flex justify-center items-center overflow-hidden mobiles:ml-6 h-8 w-8 center text-base text-white">
           {isLoggedIn ? (
             
             <img

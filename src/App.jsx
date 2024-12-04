@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact";
 import Products from "./Pages/Products";
 import ProductsDetils from "./Pages/ProductsDetils";
 import Fottar2 from "./components/Fottar2";
+import SignUp from "./Pages/SignUp";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" index element={<Home />} />
          <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} /> 
+        <Route path="/SignUp" element={<SignUp />} /> 
         <Route path="/Contact" element={<Contact />} />  
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<ProductsDetils />} />

@@ -1,62 +1,80 @@
-// src/Login.js
+import axios from "axios";
 
-import React, { useState } from 'react';
+export default function Login() {
+  const formSubmitHua = async (event) => {
+    try {
+      event.preventDefault();
 
-const Login = () => {
-  // Define state for email and password
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+      const formData = new FormData(event.target);
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
+      const email = formData.get("email");
+      const password = formData.get("password");
 
-    // Basic validation
-    if (!email || !password) {
-      setError('Both fields are required');
-      return;
+      console.log("email: ", email);
+      console.log("password: ", password);
+
+      const response = await axios.post(
+        "https://dummyjson.com/auth/login",
+        {
+          username: "emilys",
+          password: "emilyspass",
+        },
+        { withCredentials: true }
+      );
+
+      console.log("response ", response);
+    } catch (error) {
+      console.log("error ", error);
     }
-
-    // Simulate an API call (you can replace this with your real authentication logic)
-    console.log('Submitted:', { email, password });
-
-    // Reset error on successful submit
-    setError('');
-    // You can now handle redirection or further logic here
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
+    <div className="center h-[calc(100vh-160px)]">
+      <form
+        onSubmit={formSubmitHua}
+        className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col w-full"
+      >
+        <h2 className="text-gray-900 text-lg font-medium title-font mb-5">
+          Login
+        </h2>
+        <div className="relative mb-4">
+          <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+            Email
+          </label>
           <input
             type="email"
             id="email"
             name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             required
+            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
+        <div className="relative mb-4">
+          <label htmlFor="password" className="leading-7 text-sm text-gray-600">
+            Password
+          </label>
           <input
             type="password"
             id="password"
             name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
             required
+            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
+          <div>
         </div>
-        {error && <p className="error">{error}</p>}
-        <button type="submit">Login</button>
+        <button className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          Login
+        </button>
+        <a href="" className="hover:text-primary hover:underline">Create a new acount</a>
+        <button className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          
+        </button>
+
+        <p className="text-xs text-gray-500 mt-3">
+          Literally you probably haven't heard of them jean shorts.
+        </p>
+        </div>
       </form>
     </div>
   );
-};
-
-export default Login;
+}
