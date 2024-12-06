@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 export default function Hero() {
     return (
       <>
-      <div className="flex  justify-between gap-[61px] " >
+      <div className= "flex  justify-between gap-[61px]"  >
       
        <div className="relative bottom-4  ">
         <ul className=" mobiles:justify-center mobiles:flex-col  laptop:block laptopl:block tablet:block">

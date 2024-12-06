@@ -21,7 +21,7 @@ function App() {
      <Banner />
     <div className="container-one">
 
- <Header />
+ <Header  />
  <Routes>
         <Route path="/" index element={<Home />} />
          <Route path="/about" element={<About />} />

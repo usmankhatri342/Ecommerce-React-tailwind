@@ -37,12 +37,14 @@ import Products from './Products'
 // import Header from '../components/Header'
 // game , text, width, height,price,oldprice,discount}
 export default function Home() {
+  const darkMood = true ;
   // const { products, isLoading, error } = useProducts("limit=15&skip=35");
  // const isLoggedIn = true;
   return (
+    
     <>
     
-    <div className=''>
+    <div className={`${ darkMood  ?" bg-slate-900" : ""}`}>
       
       {/* <Banner />
       <Header /> */}

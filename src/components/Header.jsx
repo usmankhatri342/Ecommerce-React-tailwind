@@ -12,6 +12,9 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Login from "../Pages/Login";
+import { IoMoon } from "react-icons/io5";
+import { FiSun } from "react-icons/fi";
+
 
 const links = [
   { title: "home", link: "/" },
@@ -20,13 +23,16 @@ const links = [
 ];
 
 export default function Header() {
+//let darkMood = false ;
+  const [darkMood, setDarkMode] = useState(false);
+
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const isLoggedIn = false;
 
   const navLinkStyle =
     "capitalize hover:underline cursor-pointer hover:text-primary";
   return (
-    <div className="h-28 relative flex  justify-between mobiles:justify-between mobiles:gap- mobiles:ml-4 items-center">
+    <div className={`h-28 relative flex mb-10 justify-between${ darkMood  ?" bg-slate-900" : ""} mobiles:justify-between mobiles:gap- mobiles:ml-4 items-center`}>
       <img src={logo1} alt="" className="w-32 h-16  xl:flex 2xl:flex lg:flex mobiles:hidden mobilem:hidden mobilel:hidden   "  />
       <img src={logo2} alt="" className="w-16 h-12  xl:hidden 2xl:hidden lg:hidden md:flex sm:flex mobiles:block mobilem:flex mobilel:flex "/>
 
@@ -90,9 +96,19 @@ export default function Header() {
 
 
           </>
+          
         ) : null}
+ <button onClick={()=>{
 
+setDarkMode(!darkMood);
+
+}} 
+className={`${darkMood ? "text-white" : ""}`}> 
+  {darkMood ? <FiSun /> : <IoMoon /> }
+  </button> 
+  
         <div className="bg-primary rounded-full relative right-5 flex justify-center items-center overflow-hidden mobiles:ml-6 h-8 w-8 center text-base text-white">
+      
           {isLoggedIn ? (
             
             <img
@@ -100,10 +116,13 @@ export default function Header() {
               alt=""
               className=""
             />
+            
           ) : (
             <FaRegUser />
           )}
+          
         </div>
+       
       </div>
     </div>
   );
