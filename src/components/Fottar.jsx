@@ -7,8 +7,8 @@ import React from 'react'
 export default function Fottar() {
   return (
     <>
-    <nav className='text-white mobile:flex-col'>
-        <div className='bdr2 bg-black  text-white h-[440px] w-[100%] mt-32 flex mr-20 justify-evenly '>
+    <nav className='text-white mobile:flex-col relative bottom-10'>
+        <div className='bdr2 bg-black  text-white h-[440px] w-[100%]  flex  justify-evenly '>
             <div className='mt-20 flex-col flex gap-2 '>
                 <h3 className='text-2xl font-semibold'>Exclusive</h3>
                 <h4 className='text-xl'>Subscribe</h4>

@@ -21,7 +21,7 @@ export default function ProductsDetils() {
 
    const [selectedImage, setSelectedImage ] = useState(null);
 
-  
+   const [darkMood, setDarkMode] = useState(true);
 
 
   if (isLoading) return "loading...";
@@ -29,7 +29,7 @@ export default function ProductsDetils() {
   return (
 <>
  
-    <main className="flex min-h-[600px] shadow-2xl ">
+    <main className={`pt-10 relative bottom-10 flex min-h-[600px] shadow-2xl ${ darkMood  ?" bg-slate-900 " : ""}`}>
      <div className="imges w-[60%] bg-slate-100 flex">
      <div className="h-full w-[150px] gap-5  ">
          {product?.images.map((image)=>(

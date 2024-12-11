@@ -15,7 +15,9 @@
   will-change: filter;
   transition: filter 300ms;
 }
-
+.bdr5{
+  border: 8px solid gray;
+}
 .bdr {
   border: 2px solid #db4444;
 }

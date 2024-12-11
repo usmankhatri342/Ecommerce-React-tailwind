@@ -1,8 +1,9 @@
 // src/Contact.js
 
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-const Contact = () => {
+const Contact = (props) => {
   // Define state for form fields
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -28,9 +29,9 @@ const Contact = () => {
     setMessage('');
     setError('');
   };
-
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
   return (
-    <div className="contact-container">
+    <div className= {`contact-container ${props.darkMood ? "bg-slate-900 " : " "} relative bottom-10 pt-10` }>
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

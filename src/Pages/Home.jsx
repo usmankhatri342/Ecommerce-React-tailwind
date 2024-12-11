@@ -14,7 +14,7 @@ import Timer from "../components/Timer"
 import Button from "../components/Button"
 
 import CategoryList from "../components/CategoryList"
-
+import { useSelector } from "react-redux";
 
 import MusicExpo from "../components/MusicExpo"
 
@@ -29,6 +29,7 @@ import { Link } from 'react-router-dom'
 //import Slider from '../components/Silder'
 import Silder from '../components/Silder'
 import Products from './Products'
+//import { useState} from 'react'
 //import Products from './Products'
 //import useProducts from '../Hooks/useProduct'
 
@@ -37,14 +38,16 @@ import Products from './Products'
 // import Header from '../components/Header'
 // game , text, width, height,price,oldprice,discount}
 export default function Home() {
-  const darkMood = true ;
+ const darkMode = useSelector((state) => state.darkMode.darkMode);
+ // const [darkMood, setDarkMode] = useState(true);
+ 
   // const { products, isLoading, error } = useProducts("limit=15&skip=35");
  // const isLoggedIn = true;
   return (
     
     <>
     
-    <div className={`${ darkMood  ?" bg-slate-900" : ""}`}>
+    <div className= {`relative pt-10 bottom-10 pb-20 ${darkMode ? "bg-slate-900" : ""}`} >
       
       {/* <Banner />
       <Header /> */}
@@ -57,12 +60,12 @@ export default function Home() {
   <Card game={img3} text={"IPS LCD Gaming Monitor"} discountprice={"370"} price={"400"} discount={"-30%"}/>
   <Card game={img4}text={"S-Series Comfort Chair"}discountprice={"375"} price={"400"} discount={"-25%"}/><br />  
 
-  </div>    
+  </div>  
     </div>
-    <div className="mobiles:hidden">
+    <div className= "">
  <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales" />
 </div>
- <div className='mobiles:hidden'>
+ <div className="">
  <Timer />
  </div>
   <div className='relative bottom-20 '>
@@ -91,16 +94,16 @@ export default function Home() {
   </div>   */}
 
 <Link to={"/products"} className="h-14 w-56 mx-auto  justify-center text-center flex font-medium rounded bg-primary center text-white"><p className='items-center  flex justify-center'> View All Products </p> </Link>
-<div className='mobiles:hidden laptop:block laptopl:block tablet:block'>
+<div className= "mobiles:hidden laptop:block laptopl:block tablet:block ">
 <OfferTimer OfferDay = "Categories" OfferName ="Best Selling Products"/>
 </div>
 <div className='relative top-16 mobiles:hidden laptop:block laptopl:block tablet:block'>
 <Silder /> 
 </div>
-<div className='mobiles:flex-col overflow-hidden '>
+<div className="mobiles:flex-col overflow-hidden ">
 <CategoryList />
 </div>
-<div className='mobiles:hidden laptop:block laptopl:block tablet:block'>
+<div className="mobiles:hidden laptop:block laptopl:block tablet:block ">
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
 </div>
 <div className='relative top-16'>
@@ -138,7 +141,7 @@ export default function Home() {
   <div className=' mobiles:hidden laptop:block laptopl:block tablet:block'>
 <MusicExpo />
 </div>
-<div className='mt-20 mobiles:hidden laptop:block laptopl:block tablet:block'>
+<div className="mobiles:hidden laptop:block laptopl:block tablet:block ">
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
 </div>
 {/* <div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
@@ -157,7 +160,7 @@ export default function Home() {
 </div>
   <Button className="h-14 w-56 mx-auto my-16 justify-center mobiles:hidden flex"> View All Products </Button>
 
-<div className='mobiles:hidden laptop:block laptopl:block tablet:block'>
+<div className="mobiles:hidden laptop:block laptopl:block tablet:block ">
   <OfferTimer OfferDay = "Featured" OfferName ="New Arrival"/>
 
   <Newarrvil /> 

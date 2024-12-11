@@ -1,6 +1,6 @@
-import logo from "../assets/logo/logo.svg";
-import logo1 from "../assets/logo/fulllogo.jpg"
-import logo2 from "../assets/logo/haflogo.jpg"
+//import logo from "../assets/logo/logo.svg";
+//import logo1 from "../assets/logo/fulllogo.jpg"
+//import logo2 from "../assets/logo/haflogo.jpg"
 import amna from "../assets/images2/amna.jpg"
 // import logoMobile from "../assets/logo/logo-mobile.svg";
 import { CiSearch } from "react-icons/ci";
@@ -11,9 +11,13 @@ import { IoMenu } from "react-icons/io5";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Login from "../Pages/Login";
-import { IoMoon } from "react-icons/io5";
-import { FiSun } from "react-icons/fi";
+//import Login from "../Pages/Login";
+//import { IoMoon } from "react-icons/io5";
+//import { FiSun } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../Store/DarkMoodSlice";
+import { BsFillMoonFill } from "react-icons/bs";
+import { AiOutlineSun } from "react-icons/ai";
 
 
 const links = [
@@ -23,18 +27,26 @@ const links = [
 ];
 
 export default function Header() {
+  const dispatch = useDispatch();
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
 //let darkMood = false ;
-  const [darkMood, setDarkMode] = useState(false);
+ // const [darkMood, setDarkMode] = useState(false);
 
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const isLoggedIn = false;
 
   const navLinkStyle =
     "capitalize hover:underline cursor-pointer hover:text-primary";
+
+    console.log("uper wala dark mode ", darkMode);
   return (
-    <div className={`h-28 relative flex mb-10 justify-between${ darkMood  ?" bg-slate-900" : ""} mobiles:justify-between mobiles:gap- mobiles:ml-4 items-center`}>
-      <img src={logo1} alt="" className="w-32 h-16  xl:flex 2xl:flex lg:flex mobiles:hidden mobilem:hidden mobilel:hidden   "  />
-      <img src={logo2} alt="" className="w-16 h-12  xl:hidden 2xl:hidden lg:hidden md:flex sm:flex mobiles:block mobilem:flex mobilel:flex "/>
+    <div className=
+    {`${darkMode ? "bg-slate-900" : ""}
+    h-28 relative w-[1200px] right-4 flex mb-10 transition-colors duration-100 justify-between mobiles:justify-between mobiles:gap- mobiles:ml-4 items-center`} >
+      
+      <h2 className="font-bold text-4xl text-[#db4444]">M Usman K </h2>
+      {/* <img src={logo1} alt="" className="w-32 bg-slate-900 h-16  xl:flex 2xl:flex lg:flex mobiles:hidden mobilem:hidden mobilel:hidden   "  />
+      <img src={logo2} alt="" className="w-16 h-12  xl:hidden 2xl:hidden lg:hidden md:flex sm:flex mobiles:block mobilem:flex mobilel:flex "/> */}
 
       <div className="w-60 px-2 h-6 rounded center flex ">
         <input
@@ -45,7 +57,7 @@ export default function Header() {
         <CiSearch className="text-3xl mobiles:hidden mobilem:hidden mobilel:hidden laptop:flex laptopl:flex tablet:flex" />
       </div>
 
-      <ul className="hidden md:flex gap-3 ">
+      <ul className={`hidden md:flex gap-3  ${darkMode ? "text-white" : ""}`}>
         {links.map((item, i) => (
           <li className={navLinkStyle} key={i}>
             <Link to={item.link}>{item.title}</Link>
@@ -98,14 +110,15 @@ export default function Header() {
           </>
           
         ) : null}
- <button onClick={()=>{
-
-setDarkMode(!darkMood);
-
-}} 
-className={`${darkMood ? "text-white" : ""}`}> 
-  {darkMood ? <FiSun /> : <IoMoon /> }
-  </button> 
+     <button
+          onClick={() => {
+            dispatch(toggleDarkMode());
+          }}
+          className= {`${darkMode ? "text-white" : ""}`}
+        >
+        
+          {darkMode ? <AiOutlineSun /> : <BsFillMoonFill />}
+        </button>
   
         <div className="bg-primary rounded-full relative right-5 flex justify-center items-center overflow-hidden mobiles:ml-6 h-8 w-8 center text-base text-white">
       

@@ -11,20 +11,22 @@ import Products from "./Pages/Products";
 import ProductsDetils from "./Pages/ProductsDetils";
 import Fottar2 from "./components/Fottar2";
 import SignUp from "./Pages/SignUp";
+import { useState  , setDarkMode} from "react";
 
 
 function App() {
  
+// const [darkMood, setDarkMode] = useState(false);
 
   return (
     <>
      <Banner />
     <div className="container-one">
 
- <Header  />
+ <Header />
  <Routes>
         <Route path="/" index element={<Home />} />
-         <Route path="/about" element={<About />} />
+         <Route path="/about" element={<About   />} />
         <Route path="/login" element={<Login />} /> 
         <Route path="/SignUp" element={<SignUp />} /> 
         <Route path="/Contact" element={<Contact />} />  

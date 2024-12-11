@@ -6,7 +6,7 @@ import Card from "../components/AddToCard";
 import useProducts from "../hooks/useProducts";
 
 
-export default function Products() {
+export default function Products(props) {
   const { products, isLoading, error } = useProducts();
   
   
@@ -37,12 +37,14 @@ return result || [];
   console.log(searchTerm);
   
  const searchKaResult =  searchProducts ()
-  
+ const [darkMood, setDarkMode] = useState(true);
 
   return (
-    <div className="container-one mobiles:relative left-12 ">
-    <div className="relative right-28">
-<form >
+
+    
+    <div className={`container-one mobiles:relative  pt-20 bottom-10 mobiles:hidden laptop:block laptopl:block tablet:block ${props.darkMood  ?" bg-slate-900 " : ""}`}>
+    <div className="relative right-[100px]">
+<form className="">
 <input
         type="search"
         name="price"
@@ -63,6 +65,7 @@ return result || [];
       <div className="flex flex-wrap gap-1 mt-28 justify-between relative  ">
         {searchKaResult?.map((item) => (
           <Card 
+          darkMood={darkMood}
           id={item.id}
           key={item.id}
           game={item.thumbnail}

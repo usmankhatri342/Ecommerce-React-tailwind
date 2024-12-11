@@ -1,15 +1,22 @@
 import MobileImg from "../assets/Images/hero2.png"
 import Apple from "../assets/Images/Apple.png"
 import { FaArrowRight } from "react-icons/fa6";
+import { useSelector } from "react-redux";
+//import { useState , setDarkMode } from "react";
+//import { useSelector } from "react-redux";
 
 
 export default function Hero() {
+ // const [darkMood, setDarkMode] = useState(false);
+const darkMode = useSelector((state) => state.darkMode.darkMode);
     return (
       <>
       <div className= "flex  justify-between gap-[61px]"  >
-      
-       <div className="relative bottom-4  ">
-        <ul className=" mobiles:justify-center mobiles:flex-col  laptop:block laptopl:block tablet:block">
+       
+       <div className= "relative bottom-4  " >
+        <ul className= {`${darkMode ? "text-white" : ""}
+         mobiles:justify-center mobiles:flex-col  laptop:block laptopl:block tablet:block relative bottom-4`}
+           >
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Woman's Fashion</li>
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Man's Fashion</li>
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Electronics</li>
