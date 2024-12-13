@@ -9,7 +9,7 @@ const Contact = (props) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
-
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const Contact = (props) => {
     }
 
     // Log the form data (In real-world, you would send this data to a backend API)
-    console.log('Form Submitted:', { name, email, message });
+   // console.log('Form Submitted:', { name, email, message });
 
     // Clear form after submission
     setName('');
@@ -29,9 +29,9 @@ const Contact = (props) => {
     setMessage('');
     setError('');
   };
-  const darkMode = useSelector((state) => state.darkMode.darkMode);
+  //const darkMode = useSelector((state) => state.darkMode.darkMode);
   return (
-    <div className= {`contact-container ${props.darkMood ? "bg-slate-900 " : " "} relative bottom-10 pt-10` }>
+    <div className= {` ${darkMode ? "bg-slate-800" : " "} contact-container  relative bottom-10 pt-10` }>
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

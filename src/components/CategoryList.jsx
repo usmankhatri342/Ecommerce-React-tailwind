@@ -10,15 +10,15 @@ import PhoneImg6 from "../assets/Images/Category-Phone (6).png"
 export default function CategoryList() {
   return (
   <>
-    <div className='flex  mt-20  justify-between '>
-    <div><img src={PhoneImg} alt="Phone-Category" /></div>
-    <div><img src={PhoneImg2} alt="Phone-Category" /></div>
-    <div><img src={PhoneImg3} alt="Phone-Category" /></div>
-    <div><img src={PhoneImg4} alt="Phone-Category" /></div>
-    <div><img src={PhoneImg5} alt="Phone-Category" /></div>
-    <div><img src={PhoneImg6} alt="Phone-Category" /></div>
+    <div className='flex  mt-20 justify-between '>
+    <div className='hover:cursor-pointer bdr4 '><img src={PhoneImg} alt="Phone-Category" /></div>
+    <div className='hover:cursor-pointer bdr4'><img src={PhoneImg2} alt="Phone-Category" /></div>
+    <div className='hover:cursor-pointer bdr4 '><img src={PhoneImg3} alt="Phone-Category" /></div>
+    <div className='hover:cursor-pointer bdr4 '><img src={PhoneImg4} alt="Phone-Category" /></div>
+    <div className='hover:cursor-pointer bdr4 '><img src={PhoneImg5} alt="Phone-Category" /></div>
+    <div className='hover:cursor-pointer bdr4 '><img src={PhoneImg6} alt="Phone-Category" /></div>
     </div>
-    <div className='border-[.5px]  w-[95%] mt-10 justify-center flex '></div>
+    <div className='border-[.5px]  w-[100%] mt-10 justify-center flex '></div>
     </>
   )
 }

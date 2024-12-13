@@ -41,7 +41,7 @@ export default function Header() {
     console.log("uper wala dark mode ", darkMode);
   return (
     <div className=
-    {`${darkMode ? "bg-slate-900" : ""}
+    {`${darkMode ? "bg-slate-800" : ""}
     h-28 relative w-[1200px] right-4 flex mb-10 transition-colors duration-100 justify-between mobiles:justify-between mobiles:gap- mobiles:ml-4 items-center`} >
       
       <h2 className="font-bold text-4xl text-[#db4444]">M Usman K </h2>
@@ -54,7 +54,7 @@ export default function Header() {
           className="outline-none w-full  text-sm bg-transparent  mobiles:ml-4  "
           placeholder="What are you looking for?"
         />
-        <CiSearch className="text-3xl mobiles:hidden mobilem:hidden mobilel:hidden laptop:flex laptopl:flex tablet:flex" />
+        <CiSearch className={`text-3xl mobiles:hidden mobilem:hidden mobilel:hidden laptop:flex laptopl:flex tablet:flex ${darkMode ? "text-white" : ""}`} />
       </div>
 
       <ul className={`hidden md:flex gap-3  ${darkMode ? "text-white" : ""}`}>

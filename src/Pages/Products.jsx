@@ -4,11 +4,12 @@
 import {useState } from "react";
 import Card from "../components/AddToCard";
 import useProducts from "../hooks/useProducts";
+import { useSelector } from "react-redux";
 
 
 export default function Products(props) {
   const { products, isLoading, error } = useProducts();
-  
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
   
 //
  
@@ -31,18 +32,20 @@ export default function Products(props) {
     //   return item.rating >= 4 && item.price > 50;
     // });
     });
-console.log("result" , result);
+//console.log("result" , result);
 return result || [];
   };
-  console.log(searchTerm);
+ // console.log(searchTerm);
   
  const searchKaResult =  searchProducts ()
- const [darkMood, setDarkMode] = useState(true);
+ //const [darkMood, setDarkMode] = useState(true);
 
   return (
 
     
-    <div className={`container-one mobiles:relative  pt-20 bottom-10 mobiles:hidden laptop:block laptopl:block tablet:block ${props.darkMood  ?" bg-slate-900 " : ""}`}>
+    <div className={`
+      container-one mobiles:relative  pt-20 bottom-10 mobiles:hidden laptop:block laptopl:block tablet:block 
+    ${darkMode ? "bg-slate-800" : " "}`}>
     <div className="relative right-[100px]">
 <form className="">
 <input

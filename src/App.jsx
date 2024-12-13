@@ -14,13 +14,14 @@ import SignUp from "./Pages/SignUp";
 import { useState  , setDarkMode} from "react";
 
 
-function App() {
+function App( ) {
  
 // const [darkMood, setDarkMode] = useState(false);
 
   return (
     <>
      <Banner />
+   {/* // <div className={`${darkMood ? "bg-slate-800" : " "}`}> */}
     <div className="container-one">
 
  <Header />
@@ -39,6 +40,7 @@ function App() {
       </div>
       <div className='laptop:block tablet:block mobiles:hidden mobilem:hidden mobilel:hidden'><Fottar  /></div>
       <div className="laptop:hidden tablet:hidden mobiles:block mobilem:block mobilel:block"><Fottar2 /></div>
+      {/* </div> */}
     </>
   )
 }

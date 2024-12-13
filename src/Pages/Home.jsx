@@ -45,9 +45,10 @@ export default function Home() {
  // const isLoggedIn = true;
   return (
     
-    <>
+     <>
+  {/* <div className={`${darkMode ? "bg-slate-800" : " "} w-full`}> */}
     
-    <div className= {`relative pt-10 bottom-10 pb-20 ${darkMode ? "bg-slate-900" : ""}`} >
+    <div className= {`relative pt-10 bottom-10  ${darkMode ? "bg-slate-800" : ""}`} >
       
       {/* <Banner />
       <Header /> */}
@@ -62,10 +63,10 @@ export default function Home() {
 
   </div>  
     </div>
-    <div className= "">
+    <div className= {`${darkMode ? "text-white" : ""}`}>
  <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales" />
 </div>
- <div className="">
+ <div className={`${darkMode ? "text-white" : " "}`}>
  <Timer />
  </div>
   <div className='relative bottom-20 '>
@@ -94,7 +95,7 @@ export default function Home() {
   </div>   */}
 
 <Link to={"/products"} className="h-14 w-56 mx-auto  justify-center text-center flex font-medium rounded bg-primary center text-white"><p className='items-center  flex justify-center'> View All Products </p> </Link>
-<div className= "mobiles:hidden laptop:block laptopl:block tablet:block ">
+<div className= {`mobiles:hidden laptop:block laptopl:block tablet:block ${darkMode ? "text-white" : ""}`}>
 <OfferTimer OfferDay = "Categories" OfferName ="Best Selling Products"/>
 </div>
 <div className='relative top-16 mobiles:hidden laptop:block laptopl:block tablet:block'>
@@ -103,7 +104,7 @@ export default function Home() {
 <div className="mobiles:flex-col overflow-hidden ">
 <CategoryList />
 </div>
-<div className="mobiles:hidden laptop:block laptopl:block tablet:block ">
+<div className={`mobiles:hidden laptop:block laptopl:block tablet:block ${darkMode ? "text-white" : ""}`}>
 <OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
 </div>
 <div className='relative top-16'>
@@ -141,8 +142,8 @@ export default function Home() {
   <div className=' mobiles:hidden laptop:block laptopl:block tablet:block'>
 <MusicExpo />
 </div>
-<div className="mobiles:hidden laptop:block laptopl:block tablet:block ">
-<OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products"/>
+<div className={`mobiles:hidden laptop:block laptopl:block tablet:block ${darkMode ? "text-white" : ""}`}>
+<OfferTimer OfferDay = "Our Products" OfferName ="Explore Our Products" />
 </div>
 {/* <div className=" flex-wrap justify-between flex relative right-[120px] mt-72">
     <Card game={img111} height={"180"} width={"115"}text={"Breed Dry Dog Food"}  discountprice={"$260"} discount={"-25%"} /> 
@@ -160,7 +161,7 @@ export default function Home() {
 </div>
   <Button className="h-14 w-56 mx-auto my-16 justify-center mobiles:hidden flex"> View All Products </Button>
 
-<div className="mobiles:hidden laptop:block laptopl:block tablet:block ">
+<div className={` mobiles:hidden laptop:block laptopl:block tablet:block ${darkMode ? "text-white" : ""}`}>
   <OfferTimer OfferDay = "Featured" OfferName ="New Arrival"/>
 
   <Newarrvil /> 
@@ -172,6 +173,7 @@ export default function Home() {
 
   </div> 
     </div>
+    {/* </div> */}
     </>
   )
 }
