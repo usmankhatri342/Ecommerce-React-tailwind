@@ -5,11 +5,14 @@ import {useState } from "react";
 import Card from "../components/AddToCard";
 import useProducts from "../hooks/useProducts";
 import { useSelector } from "react-redux";
+import { useSearchParams } from "react-router-dom";
 
 
 export default function Search(props) {
   const { products, isLoading, error } = useProducts();
   const darkMode = useSelector((state) => state.darkMode.darkMode);
+  const [searchParams] = useSearchParams();
+  //const searchTerm = searchParams.get("q")
   
 //
  

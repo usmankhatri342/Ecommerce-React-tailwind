@@ -72,7 +72,7 @@ return result || [];
           id={item.id}
           key={item.id}
           game={item.thumbnail}
-          name={item.title}
+          text={item.title}
           price={item.price}
           discountPercentage={item.discountPercentage}
           rating={item.rating}

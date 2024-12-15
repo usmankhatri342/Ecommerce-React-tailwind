@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../Store/DarkMoodSlice";
 import { BsFillMoonFill } from "react-icons/bs";
 import { AiOutlineSun } from "react-icons/ai";
+import { useNavigate } from "react-router";
 
 
 const links = [
@@ -27,7 +28,10 @@ const links = [
 ];
 
 export default function Header() {
+  const navigate = useNavigate();
+
   const dispatch = useDispatch();
+
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 //let darkMood = false ;
  // const [darkMood, setDarkMode] = useState(false);
@@ -38,7 +42,16 @@ export default function Header() {
   const navLinkStyle =
     "capitalize hover:underline cursor-pointer hover:text-primary";
 
-    console.log("uper wala dark mode ", darkMode);
+   // console.log("uper wala dark mode ", darkMode);
+    const handleSearch = (e)=>{
+      e.preventDefault()
+const Searchterm = e?.target?.children[0]?.value;
+console.log("value", Searchterm);
+
+
+      navigate(`Search?query=${ Searchterm}`)
+    }
+
   return (
     <div className=
     {`${darkMode ? "bg-slate-800" : ""}
@@ -49,14 +62,18 @@ export default function Header() {
       {/* <img src={logo1} alt="" className="w-32 bg-slate-900 h-16  xl:flex 2xl:flex lg:flex mobiles:hidden mobilem:hidden mobilel:hidden   "  />
       <img src={logo2} alt="" className="w-16 h-12  xl:hidden 2xl:hidden lg:hidden md:flex sm:flex mobiles:block mobilem:flex mobilel:flex "/> */}
 
-      <div className="w-60 px-2 h-6 rounded center flex ">
+      <form onSubmit={handleSearch} className="w-72 px-2 h-10 rounded center flex ">
         <input
           type="search"
           className="outline-none w-full  text-sm bg-transparent  mobiles:ml-4  "
           placeholder="What are you looking for?"
+
         />
+        <button>
         <CiSearch className={`text-3xl mobiles:hidden mobilem:hidden mobilel:hidden laptop:flex laptopl:flex tablet:flex ${darkMode ? "text-white" : ""}`} />
-      </div>
+
+        </button>
+      </form>
 
       <ul className={`hidden md:flex gap-3  ${darkMode ? "text-white" : ""}`}>
         {links.map((item, i) => (
