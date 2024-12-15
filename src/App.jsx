@@ -12,6 +12,7 @@ import ProductsDetils from "./Pages/ProductsDetils";
 import Fottar2 from "./components/Fottar2";
 import SignUp from "./Pages/SignUp";
 import { useSelector } from "react-redux";
+import Search from "./Pages/Search";
 //import { useState  , setDarkMode} from "react";
 
 
@@ -26,9 +27,10 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
      <Banner />
      
   
-    <div className= {`container-one ${darkMode ? "bg-slate-950" : " "}`}>
-
+    <div className= {` ${darkMode ? "bg-slate-800" : " "}`}>
+<div className="container-one"> 
  <Header />
+ </div>
  <Routes>
         <Route path="/" index element={<Home />} />
          <Route path="/about" element={<About   />} />
@@ -37,6 +39,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
         <Route path="/Contact" element={<Contact />} />  
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<ProductsDetils />} />
+        <Route path="/Search" element={<Search />} /> 
 
       
       </Routes>

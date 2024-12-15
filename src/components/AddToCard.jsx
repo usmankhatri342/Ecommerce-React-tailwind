@@ -24,7 +24,7 @@ import { useSelector } from 'react-redux';
 
 <div
        
-       className={`w-[270px] h-[390px]  ${darkMode ? "bg-slate-700" : "bg-slate-200"} bdr5 shadow-xl  overflow-hidden relative p-3 sh bottom-32 left-[100px] mt-32 maindiv`}>
+       className={`w-72 h-[410px]  ${darkMode ? "bg-slate-700" : "bg-slate-200"} bdr5 shadow-xl  overflow-hidden relative p-3 sh bottom-32 left-[100px] mt-32 maindiv`}>
     
         <div className=" h-[250px] w-full "> 
             <div className="border-2 border-primary h-[26px] w-14 bg-primary rounded flex items-center justify-center text-white text-xs  ml-3 absolute top-6  ">{-25}</div>

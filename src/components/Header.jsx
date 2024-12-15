@@ -43,8 +43,9 @@ export default function Header() {
     <div className=
     {`${darkMode ? "bg-slate-800" : ""}
     h-28 relative w-[1200px] right-4 flex mb-10 transition-colors duration-100 justify-between mobiles:justify-between mobiles:gap- mobiles:ml-4 items-center`} >
-      
+      <Link to={"/"}>
       <h2 className="font-bold text-4xl text-[#db4444]">M Usman K </h2>
+      </Link>
       {/* <img src={logo1} alt="" className="w-32 bg-slate-900 h-16  xl:flex 2xl:flex lg:flex mobiles:hidden mobilem:hidden mobilel:hidden   "  />
       <img src={logo2} alt="" className="w-16 h-12  xl:hidden 2xl:hidden lg:hidden md:flex sm:flex mobiles:block mobilem:flex mobilel:flex "/> */}
 

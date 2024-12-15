@@ -94,10 +94,11 @@ export default function ProductsDetils() {
         </div>
       </div>
 
-     
+      
      </div>
-     
+    
     </main>
+    <div className="ml-96 font-bold w-96 flex justify-center items-center text-3xl  h-40">Products Detils</div>
     {/* <div className="flex justify-center p-10">
     <Link 
     to={"/"}
