@@ -68,7 +68,7 @@ return result || [];
       <div className="flex flex-wrap gap-1 mt-28 justify-between relative  ">
         {searchKaResult?.map((item) => (
           <Card 
-          darkMood={darkMood}
+          // darkMood={darkMood}
           id={item.id}
           key={item.id}
           game={item.thumbnail}

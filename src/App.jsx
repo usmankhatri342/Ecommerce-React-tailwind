@@ -11,18 +11,22 @@ import Products from "./Pages/Products";
 import ProductsDetils from "./Pages/ProductsDetils";
 import Fottar2 from "./components/Fottar2";
 import SignUp from "./Pages/SignUp";
-import { useState  , setDarkMode} from "react";
+import { useSelector } from "react-redux";
+//import { useState  , setDarkMode} from "react";
 
 
 function App( ) {
  
 // const [darkMood, setDarkMode] = useState(false);
+const darkMode = useSelector((state) => state.darkMode.darkMode);
+
 
   return (
     <>
      <Banner />
-   {/* // <div className={`${darkMood ? "bg-slate-800" : " "}`}> */}
-    <div className="container-one">
+     
+  
+    <div className= {`container-one ${darkMode ? "bg-slate-950" : " "}`}>
 
  <Header />
  <Routes>
@@ -40,7 +44,7 @@ function App( ) {
       </div>
       <div className='laptop:block tablet:block mobiles:hidden mobilem:hidden mobilel:hidden'><Fottar  /></div>
       <div className="laptop:hidden tablet:hidden mobiles:block mobilem:block mobilel:block"><Fottar2 /></div>
-      {/* </div> */}
+     
     </>
   )
 }

@@ -4,39 +4,16 @@ import img2 from '../assets/images/keyboardimg.png'
 import img3 from '../assets/images/tvimg.png'
 import img4 from '../assets/images/chairimg.png'
 import Hero from "../components/Hero"
-
-//import img10 from "../assets/Images/Card2shart.png"
-//import img11 from "../assets/Images/Card2bag.png"
-//import img12 from "../assets/Images/Card2spekar.png"
-//import img13 from "../assets/Images/Card2maze.png"
 import OfferTimer from "../components/OfferTimer"
 import Timer from "../components/Timer"
 import Button from "../components/Button"
-
 import CategoryList from "../components/CategoryList"
 import { useSelector } from "react-redux";
-
 import MusicExpo from "../components/MusicExpo"
-
-//import img110 from "../assets/images2/Card3camra.png"
-//import img111 from "../assets/images2/Card3choko.png"
-//import img112 from "../assets/images2/Card3laptop.png"
-//import img113 from "../assets/images2/Card3shos.png"
-
 import Newarrvil from "../components/Newarrvil"
 import { Link } from 'react-router-dom'
-
-//import Slider from '../components/Silder'
 import Silder from '../components/Silder'
 import Products from './Products'
-//import { useState} from 'react'
-//import Products from './Products'
-//import useProducts from '../Hooks/useProduct'
-
-
-// import Banner from '../components/Banner'
-// import Header from '../components/Header'
-// game , text, width, height,price,oldprice,discount}
 export default function Home() {
  const darkMode = useSelector((state) => state.darkMode.darkMode);
  // const [darkMood, setDarkMode] = useState(true);

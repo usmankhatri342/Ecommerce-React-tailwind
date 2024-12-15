@@ -27,6 +27,12 @@
 .bdr2 {
   border: 2px solid #0e0d0d4d;
 }
+.bdrSize{
+  border: 1px solid #0a0a0a;
+  border-radius: 5px;
+  
+  
+}
 .bdr4{
   border: 3px solid #0a0a0a;
 }
