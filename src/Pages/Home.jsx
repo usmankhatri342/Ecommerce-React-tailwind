@@ -15,11 +15,12 @@ import { Link } from 'react-router-dom'
 import Silder from '../components/Silder'
 import Products from './Products'
 import OndLast from '../components/ondLast'
+import useProducts from '../hooks/useProducts'
 export default function Home() {
  const darkMode = useSelector((state) => state.darkMode.darkMode);
  // const [darkMood, setDarkMode] = useState(true);
- 
-  // const { products, isLoading, error } = useProducts("limit=15&skip=35");
+
+  const { products, isLoading, error } = useProducts("??limit=10&skip=30");
  // const isLoggedIn = true;
   return (
     
@@ -33,7 +34,7 @@ export default function Home() {
       <div className='container-one'>
        <Hero />
        </div>
-       <div className="mt-20 container-one">
+       {/* <div className="mt-20 container-one">
     <div className='mobiles:hidden laptop:block tablet:block laptopl:block '> <Silder   />  </div>
              <div className='flex justify-between relative right-24 mobiles:flex-col mobiles:justify-center tre tablet:hidden laptop:hidden mobiles:ml-6 '>
   <Card game={img1} height={"152"} width={"172"}text={"HAVIT HV-G92 Gamepad"} discountPrice={"$120"} price={"$160"} discount={"-40%"}/>
@@ -42,7 +43,7 @@ export default function Home() {
   <Card game={img4}text={"S-Series Comfort Chair"}discountprice={"375"} price={"400"} discount={"-25%"}/><br />  
 
   </div>  
-    </div>
+    </div> */}
     <div className= {`${darkMode ? "text-white" : ""} container-one `}>
  <OfferTimer OfferDay = "Today’s" OfferName ="Flash Sales" />
 </div>
@@ -53,14 +54,14 @@ export default function Home() {
    {/* <Silder/>    */}
   </div> 
  
-  <div className='container-one mobiles:hidden laptop:block laptopl:block tablet:block'>
+   <div className='container-one mobiles:hidden laptop:block laptopl:block tablet:block'>
 <Silder /> 
-</div>
+</div> 
 
 
 <div>
-   {/* <div>
-  {products?.slice(0, 25)?.map((item) => (
+    {/* <div className='flex cantainer-one gap-3'>
+  {products?.slice(4, 52)?.map((item) => (
           
             <Card
             key={item.id}
@@ -74,7 +75,7 @@ export default function Home() {
             />
          
         ))}
-  </div>    */}
+  </div>     */}
 
 <Link to={"/products"} className="h-14 w-56 mx-auto  justify-center text-center flex font-medium rounded bg-primary center text-white"><p className='items-center  flex justify-center'> View All Products </p> </Link>
 <div className= {`container-one mobiles:hidden laptop:block laptopl:block tablet:block ${darkMode ? "text-white" : ""}`}>

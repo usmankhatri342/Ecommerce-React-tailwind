@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 // hooks function returns state
-export default function useProducts(query) {
+export default function useProducts(query = " ") {
     // memoization 
-  const API_KEY = `https://dummyjson.com/products?limit=50&skip=10`;
-
+  const API_KEY = `https://dummyjson.com/products${query}`;
+//?limit=55&skip=100
   const [products, setProducts] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -29,7 +29,7 @@ export default function useProducts(query) {
   // useEffect ak bar call hoga (in this case)
   useEffect(() => {
     getProductData();
-  }, []);
+  }, [query]);
 
   //console.log("slider products ", products);
 

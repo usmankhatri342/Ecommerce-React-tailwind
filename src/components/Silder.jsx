@@ -39,9 +39,9 @@ export default function Slider() {
             <Card
               id={item.id}
               game={item.thumbnail}
-              text={item.title}
-              price={item.price}
-              discountPrice={item.discountPercentage}
+              name={item.title}
+              discountPrice={item.price}
+              price={item.discountPercentage}
               rating={item.rating}
               
             />

@@ -34,11 +34,11 @@ import { useSelector } from 'react-redux';
             </div>    
             <div className='flex items-center justify-center  mr-auto ml-auto absolute top-9 left-9 hover:scale-110'><img  src={props.game} alt="ProductImage" /></div>
         </div>
-        <h4 className="mb-1">{props.text}</h4>
+        <h4 className="mb-1">{props.name}</h4>
         <div className='mb-1'>
            
             <span >${props.price}</span>
-            <span className='text-gray-600 ml-3 line-through'>{props.discountPercentage}</span>
+            <span className='text-gray-600 ml-3 line-through'>{props.discountPrice}</span>
             <div>  {props.key}</div>
          
         </div>
