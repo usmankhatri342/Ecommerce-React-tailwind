@@ -4,7 +4,7 @@ import threeimg from "../assets/Images/fast 3.png"
 
 export default function OndLast() {
   return (
-    <div className=" flex justify-between h-[450px] items-center">
+    <div className=" flex justify-between h-[450px] items-center max-sm:flex-col max-sm:mt-12">
       <div><img src={oneimg} alt=""  className="hover:cursor-pointer"/></div>
        <div><img src={twoimg} alt="" className="hover:cursor-pointer" /></div>
       <div><img src={threeimg} alt=""  className="hover:cursor-pointer"/></div>  

@@ -11,11 +11,11 @@ export default function Hero() {
 const darkMode = useSelector((state) => state.darkMode.darkMode);
     return (
       <>
-      <div className= "flex  justify-between gap-[61px]"  >
+      <div className= "flex  justify-between gap-[61px] laptopl:block"  >
        
        <div className= "relative bottom-4  " >
         <ul className= {`${darkMode ? "text-white" : ""}
-         mobiles:justify-center mobiles:flex-col  laptop:block laptopl:block tablet:block relative bottom-4`}
+        max-sm:ml-24 `}
            >
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Woman's Fashion</li>
           <li className=" cursor-pointer hover:underline hover:text-[#db4444] my-4">Man's Fashion</li>

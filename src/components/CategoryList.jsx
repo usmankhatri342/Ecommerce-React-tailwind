@@ -10,7 +10,7 @@ import PhoneImg6 from "../assets/Images/Category-Phone (6).png"
 export default function CategoryList() {
   return (
   <>
-    <div className='flex  mt-20 justify-between '>
+    <div className='flex  mt-20 justify-between max-sm:flex-col max-sm:w-40 max-sm:ml-20 max-sm:gap-5 '>
     <div className='hover:cursor-pointer bdr4 '><img src={PhoneImg} alt="Phone-Category" /></div>
     <div className='hover:cursor-pointer bdr4'><img src={PhoneImg2} alt="Phone-Category" /></div>
     <div className='hover:cursor-pointer bdr4 '><img src={PhoneImg3} alt="Phone-Category" /></div>

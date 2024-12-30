@@ -18,7 +18,7 @@ export default function Slider() {
   const { products, isLoading, error } = useProducts( );
 
   return (
-    <div className="mobiles:flex-col">
+    <div className="max-sm:">
       {isLoading ? "loading..." : ""}
       {error}
 

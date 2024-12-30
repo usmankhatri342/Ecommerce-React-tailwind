@@ -15,7 +15,7 @@ export default {
         "mobilel":"425px",
         "tablet":"768px",
         "laptop":"1024px",
-        "laptop":"1440px",
+        "laptopl":"1440px",
         
   
        }
